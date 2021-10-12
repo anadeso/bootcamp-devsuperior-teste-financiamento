@@ -46,28 +46,14 @@ Deve calcular corretamente o valor da entrada
 Deve calcular corretamente o valor da prestação
 
 ### Resultado
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+<img width="1305" alt="Captura de Tela 2021-10-11 às 11 09 41 PM" src="https://user-images.githubusercontent.com/19472198/136879272-157652a2-4e62-4f1a-b1bc-0ddf569bfe6a.png">
 
 ### 🛠 Tecnologias
 
 As seguintes ferramentas foram usadas na construção do projeto:
 
 - [Java 8](https://www.oracle.com/br/java/technologies/javase/javase-jdk8-downloads.html)
-- [JUnit]() 
+- [JUnit](https://junit.org/junit5/) 
 
 ### Autor
 ---
