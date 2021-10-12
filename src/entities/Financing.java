@@ -6,10 +6,8 @@ public class Financing {
     private Double income;
     private Integer months;
 
-    public Financing() {
-    }
-
     public Financing(Double totalAmount, Double income, Integer months) {
+        validaPrestacao(totalAmount, income, months);
         this.totalAmount = totalAmount;
         this.income = income;
         this.months = months;
@@ -20,6 +18,7 @@ public class Financing {
     }
 
     public void setTotalAmount(Double totalAmount) {
+        validaPrestacao(totalAmount, income, months);
         this.totalAmount = totalAmount;
     }
 
@@ -28,6 +27,7 @@ public class Financing {
     }
 
     public void setIncome(Double income) {
+        validaPrestacao(totalAmount, income, months);
         this.income = income;
     }
 
@@ -36,19 +36,21 @@ public class Financing {
     }
 
     public void setMonths(Integer months) {
+        validaPrestacao(totalAmount, income, months);
         this.months = months;
     }
 
-    private Double entry() {
+    public Double entry() {
         return totalAmount * 0.20;
     }
 
-    private Double quota() {
+    public Double quota() {
         return (totalAmount - entry()) / months;
     }
 
-    private void validaPrestacao(double income, int months, double totalAmount) {
-        if(totalAmount * 0.8 / months > income) {
+    private void validaPrestacao(double totalAmount, double income, int months) {
+        // 80% valor total e metade da renda
+        if(totalAmount * 0.8 / months > income / 2.0) {
             throw new IllegalArgumentException("A parcela não pode ser maior que a metade da renda");
         }
     }
